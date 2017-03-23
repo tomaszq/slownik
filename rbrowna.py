@@ -18,14 +18,15 @@ for i in range(0, n):
     wsp_x.append(x)
     wsp_y.append(y)
     
-print wsp_x, wsp_y
+#print wsp_x, wsp_y
 
 # oblicz wektor końcowego przesunięcia
 s = np.fabs(np.sqrt(x**2 + y**2))
 print "Wektor przesunięcia:", s
 print wsp_x[n], wsp_y[n]
 print wsp_x[0], wsp_y[0]
-plt.plot(wsp_x[0], wsp_y[0],wsp_x[n], wsp_y[n], "o:", color="green", linewidth="3", alpha=0.5)
+plt.plot(wsp_x, wsp_y, "o:", color="green", linewidth="3", alpha=0.5)
+plt.plot([wsp_x[0],wsp_x[n]], [wsp_y[0],wsp_y[n]])
 plt.legend(["Dane x, y\nPrzemieszczenie: " + str(s)], loc="upper left")
 plt.xlabel("Wsp_x")
 plt.ylabel("Wsp_y")
